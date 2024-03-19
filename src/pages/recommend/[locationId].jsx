@@ -6,7 +6,6 @@ import Image from "next/image";
 import LeftContents from "./Contents/LeftContents";
 import PopupContents from "./PopupContents/index";
 import { useState } from "react";
-import { allData } from "@/data/shrine.json";
 
 const RecommendPage = () => {
   const [isPopupOpen, setPopupOpen] = useState(false);
@@ -14,7 +13,6 @@ const RecommendPage = () => {
 
   const locationId = router.query.locationId;
   let data = require("@/data/" + locationId);
-  console.log(allData);
 
   const returnTitle = () => {
     router.push(paths.index);
